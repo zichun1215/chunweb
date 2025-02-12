@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electronic Information Video Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #000;
+            color: #FFD700;
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #222;
+            padding: 20px;
+            height: 100vh;
+            color: #FFD700;
+            position: fixed;
+        }
+        .sidebar a {
+            display: block;
+            color: #FFD700;
+            padding: 10px;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            background-color: #FFD700;
+            color: #000;
+        }
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            flex-grow: 1;
+            text-align: center;
+        }
+        .container {
+            width: 90%;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        h1 {
+            background-color: #FFD700;
+            color: black;
+            padding: 15px;
+        }
+        .video {
+            background: #222;
+            padding: 15px;
+            margin: 10px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+            width: 30%;
+            box-sizing: border-box;
+        }
+        iframe {
+            width: 100%;
+            height: 200px;
+            border: none;
+        }
+    </style>
+    <script>
+        function showPage(pageId) {
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+            document.getElementById(pageId).style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="sidebar">
+        <a href="#" onclick="showPage('electronic')">Electronic Videos</a>
+        <a href="#" onclick="showPage('financial')">Financial Info</a>
+    </div>
+    <div class="content">
+        <div id="electronic" class="page">
+            <h1>Electronic Information Video Site</h1>
+            <div class="container">
+                <div class="video">
+                    <h2>HOW THE INTERNET WORKS</h2>
+                    <iframe src="https://www.youtube.com/embed/x3c1ih2NJEg" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW MOBILE PHONES WORK</h2>
+                    <iframe src="https://www.youtube.com/embed/1JZG9x_VOwA" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW ANTENNAS WORK</h2>
+                    <iframe src="https://www.youtube.com/embed/ZaXm6wau-jc" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW OPTICAL FIBER CABLES WORK</h2>
+                    <iframe src="https://www.youtube.com/embed/jZOg39v73c4" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>WHAT'S INSIDE A SMARTPHONE?</h2>
+                    <iframe src="https://www.youtube.com/embed/fCS8jGc3log" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>COMPUTER SCIENCE BASICS</h2>
+                    <iframe src="https://www.youtube.com/embed/CxGSnA-RTsA" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW TRANSISTORS REMEMBER DATA</h2>
+                    <iframe src="https://www.youtube.com/embed/rM9BjciBLmg" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>CRAFTING A CPU TO RUN PROGRAMS</h2>
+                    <iframe src="https://www.youtube.com/embed/GYlNoAMBY6o" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW OLED DISPLAYS WORK</h2>
+                    <iframe src="https://www.youtube.com/embed/xAMhX3Drq14" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW THE CLOCK TELLS THE CPU TO MOVE FORWARD</h2>
+                    <iframe src="https://www.youtube.com/embed/PVNAPWUxZ0g" allowfullscreen></iframe>
+                </div>
+                <div class="video">
+                    <h2>HOW ELEVATORS WORK</h2>
+                    <iframe src="https://www.youtube.com/embed/rKp4pe92ljg" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+        <div id="financial" class="page" style="display: none;">
+            <h1>Financial Information</h1>
+            <div class="container">
+                <p>Financial-related videos will be added here.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
