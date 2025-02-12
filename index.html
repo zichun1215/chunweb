@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -20,6 +20,24 @@
             height: 100vh;
             color: #FFD700;
             position: fixed;
+            left: 0;
+            top: 0;
+            transition: transform 0.3s ease;
+        }
+        .hidden {
+            transform: translateX(-220px);
+        }
+        .menu-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            background-color: #FFD700;
+            color: black;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            z-index: 1000;
         }
         .sidebar a {
             display: block;
@@ -65,6 +83,9 @@
         }
     </style>
     <script>
+        function toggleSidebar() {
+            document.querySelector('.sidebar').classList.toggle('hidden');
+        }
         function showPage(pageId) {
             document.querySelectorAll('.page').forEach(page => {
                 page.style.display = 'none';
@@ -74,7 +95,8 @@
     </script>
 </head>
 <body>
-    <div class="sidebar">
+    <button class="menu-btn" onclick="toggleSidebar()">MENU</button>
+    <div class="sidebar hidden">
         <a href="#" onclick="showPage('electronic')">Electronic Info</a>
         <a href="#" onclick="showPage('financial')">Financial Info</a>
     </div>
